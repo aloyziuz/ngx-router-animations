@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint", 
-    "publish-npm":"ng build router-animations && cd dist/router-animations && npm publish --access public"
+    "publish-npm":"ng build router-animations --configuration production && cd dist/router-animations && npm publish --access public"
   },
   "private": true,
   "dependencies": {
