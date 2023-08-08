@@ -22,7 +22,7 @@ ngx-router-animations is a collection of awesome, reusable router animations. In
 [Animations Showcase](https://ngx-router-animations.stackblitz.io/) or
 [StackBlitzDemo](https://stackblitz.com/edit/ngx-router-animations-example?file=src%2Fapp%2Fapp.component.ts)
 ## Install
-     npm install ngx-router-animations --save
+     npm install @aloysius-software-factory/ngx-router-animations --save
 
 #####  Load  BrowserAnimationsModule which is needed by Angular Animations
 ```typescript
