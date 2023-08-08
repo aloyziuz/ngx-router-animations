@@ -105,6 +105,39 @@ In addition your components should also have defined width and height. The reaso
 ```
 Still in Doubt ? Check [minimalistic demo ](https://stackblitz.com/edit/ngx-router-animations-example?file=src%2Fapp%2Fapp.component.ts)
 
+
+Here is a unified version of the above. Instead of adding css to each and every component rendered by the router, I use css selector to select and apply the styles. I removed `overflow: hidden` because I find it unnecessary . 
+```
+/* 
+this class should wrap router outlet for transition animation 
+this is required for router animation to work properly
+*/
+div.router-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+
+/* 
+this should select all components that is placed after <router-outlet> 
+in a <div> with router-wrapper class
+
+this is required for router animations to work properly
+
+this assumes that components that is rendered by angular RouterOutlet is placed under 
+<router-outlet> tag (just in case angular changes it in the future)
+*/
+div.router-wrapper router-outlet ~ * {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+```
+
+
 ## Parameters
  You can also provide your custom animation parameters such as duration and delay of animations.  Supported params: ( enterTiming, leaveTiming, enterDelay, leaveDelay).
  Example with params:
