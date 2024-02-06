@@ -1,6 +1,6 @@
 {
   "name": "@aloysius-software-factory/ngx-router-animations",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "peerDependencies": {
     "@angular/common": ">=6.0.0",
     "@angular/core": " >=6.0.0"
